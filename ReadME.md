@@ -1,27 +1,24 @@
 # Trabalho de bd
 </br>
 
+## Equipe
+Carlos Matheus Rodrigues Martins, Lauana Cartaxo, David Andrade Araujo
+
 ## O que foi feito
 
 
 * Apenas as tabelas foram criadas
-
-## O que ainda falta ser feito
-
-</br>
-
 * Povoamento (notas, avalicao)
 * Seleções (usando inners, lefts, full e right join´s)
 * Criação das views
 * enviar o trabalho
 
+## O que ainda falta ser feito
+
+</br>
 
 
 
-## Seleções
 
-*  selecionar todas casas disponiveis(view)
-*  selecionar toods os apartamentos disponiveis(view)
-*  selecionar tdos os locadores com notas acima de acima de 3
-*  selecionar todos os apartamentos disponiveis ou não disponiveis.
-*  selecionar todos os locadores e suas notas.
+
+
