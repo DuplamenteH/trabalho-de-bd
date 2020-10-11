@@ -10,7 +10,18 @@
 
 </br>
 
-* Povoamento
+* Povoamento (notas, avalicao)
 * Seleções (usando inners, lefts, full e right join´s)
 * Criação das views
 * enviar o trabalho
+
+
+
+
+## Seleções
+
+*  selecionar todas casas disponiveis(view)
+*  selecionar toods os apartamentos disponiveis(view)
+*  selecionar tdos os locadores com notas acima de acima de 3
+*  selecionar todos os apartamentos disponiveis ou não disponiveis.
+*  selecionar todos os locadores e suas notas.
