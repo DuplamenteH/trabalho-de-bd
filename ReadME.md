@@ -9,7 +9,7 @@ Carlos Matheus Rodrigues Martins, Lauana Cartaxo, David Andrade Araujo
 
 * Apenas as tabelas foram criadas
 * Povoamento (notas, avalicao)
-* Seleções (usando inners, lefts, full e right join´s)
+* Seleções
 * Criação das views
 * enviar o trabalho
 
