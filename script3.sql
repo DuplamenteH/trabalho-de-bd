@@ -99,80 +99,69 @@ insert into avaliacao values(
 	default,
 	5,
 	1,
-	true,
-	false
+	true
 );
 
 insert into avaliacao values(
 	default,
 	8,
 	5,
-	false,
-	true
+	false
 );
 insert into avaliacao values(
 	default,
 	7,
 	4,
-	false,
-	true
+	false
 );
 insert into avaliacao values(
 	default,
 	6,
 	3,
-	false,
-	true
+	false
 );
 insert into avaliacao values(
 	default,
 	9,
 	6,
-	true,
-	false
+	true
 );
 
 insert into avaliacao values(
 	default,
 	10,
 	7,
-	true,
-	false
+	true
 );
 insert into avaliacao values(
 	default,
 	11,
 	8,
-	true,
-	false
+	true
 );
 insert into avaliacao values(
 	default,
 	12,
 	9,
-	true,
-	false
+	true
 );
 insert into avaliacao values(
 	default,
 	13,
 	10,
-	true,
-	false
+	true
 );
 insert into avaliacao values(
 	default,
 	14,
 	11,
-	false,
-	true
+	false
 );
 insert into avaliacao values(
 	default,
 	4,
 	2,
-	true,
-	false
+	true
 );
 insert into locador values(
 	DEFAULT,
@@ -229,7 +218,12 @@ create or replace view bairrosCaros as
 	select imovel.bairro, max(imovel.valor) from imovel 
 			group by bairro 
 			having max(imovel.valor)>1000;
-			
+
+
+create or replace view bairrosBaratos as
+	select imovel.bairro, max(imovel.valor) from imovel 
+			group by bairro 
+			having max(imovel.valor)<1000;
 
 select * from bairrosBaratos;
 select * from bairrosCaros;

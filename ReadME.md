@@ -5,12 +5,12 @@
 
 
 * Apenas as tabelas foram criadas
-
+* Povoamento (notas, avalicao)
 ## O que ainda falta ser feito
 
 </br>
 
-* Povoamento (notas, avalicao)
+
 * Seleções (usando inners, lefts, full e right join´s)
 * Criação das views
 * enviar o trabalho

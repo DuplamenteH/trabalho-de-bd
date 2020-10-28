@@ -12,7 +12,8 @@ CREATE DATABASE "trabalhoBD"
     CONNECTION LIMIT = -1;
 	
 	
-drop table Locatario;	
+/*drop table Locatario;*/
+
 create table Locatario(
 		idLocat serial not null,
 		rg varchar(50),
@@ -22,10 +23,9 @@ create table Locatario(
 		telefone2 varchar(20),
 		login varchar(16),
 		senha varchar(80),
-		primary key(idLocat)
 	); 
 	
-alter table Locatario add primary key (idLocat);
+
 	
 	
 /*Em imagem será salvo o caminho da imagem*/	
@@ -44,6 +44,8 @@ create table imovel(
 
 drop table imovel cascade;
 drop table locador cascade;
+
+
 create table locador(
 	idLocad serial not null unique,
 	idImovel serial not null,
@@ -54,24 +56,23 @@ create table locador(
 	telefone1 varchar(16) not null,
 	telefone2 varchar(16),
 	login varchar(20) not null,
-	senha varchar(80) not null,
-	totalImo integer,
+	senha varchar(80) not null
 	primary key (idLocad),
-	foreign key (idImovel) references imovel
+	foreign key (idImovel) references imovel drop on CASCADE
 );
 create table casa(
 	idImovel serial not null,
-	descrição text,
+	descricao text(200000),
 	diponibilidade boolean not null,
 	primary key (idImovel),
-	foreign key (idImovel) references imovel
+	foreign key (idImovel) references imovel drop on CASCADE
 );
 create table apartamento(
 	idImovel serial not null,
-	descrição text,
+	descricao text,
 	diponibilidade boolean not null,
 	primary key (idImovel),
-	foreign key (idImovel) references imovel
+	foreign key (idImovel) references imovel drop on CASCADE
 );
 create table notas(
 	idLocad serial,
@@ -79,16 +80,15 @@ create table notas(
 	notas numeric,
 	feedbak text,
 	primary key (idnotas),
-	foreign key (idLocad) references locador
+	foreign key (idLocad) references locador drop on CASCADE
 );
 create table avaliação(
 	idavaliacao serial not null unique primary key,
 	idLocad serial not null,
 	idNotas serial not null,
-	positiva boolean not null unique,
-	negativa boolean not null unique,
-	foreign key (idLocad) references locador,
-	foreign key (idNotas) references notas
+	positiva boolean not null ,
+	foreign key (idLocad) references locador drop on CASCADE,
+	foreign key (idNotas) references notas DROP ON CASCADE
 );
 
 
@@ -243,7 +243,6 @@ select * from imovel;
 	telefone2 varchar(16),
 	login varchar(20) not null,
 	senha varchar(80) not null,
-	totalImo integer,
 	primary key (idLocad),
 	foreign key (idImovel) references imovel
 */
@@ -257,8 +256,7 @@ insert into locador values(
 	'85994562871',
 	'85995647524',
 	'PEDROAL',
-	'PEDRO4525',
-	'1'
+	'PEDRO4525'
 );
 insert into locador values(
 	DEFAULT,
@@ -270,8 +268,7 @@ insert into locador values(
 	'85995660891',
 	'85997747023',
 	'JOAOCAR',
-	'JOAO5429',
-	'2'
+	'JOAO5429'
 );
 insert into locador values(
 	DEFAULT,
@@ -283,8 +280,7 @@ insert into locador values(
 	'85995460299',
 	'85998753093',
 	'BERNARVIAN',
-	'BERVIAN5429',
-	'2'
+	'BERVIAN5429'
 );
 insert into locador values(
 	DEFAULT,
@@ -296,8 +292,7 @@ insert into locador values(
 	'85999461299',
 	'85992793090',
 	'LETICIAOLIVER',
-	'OLIVER4298',
-	'4'
+	'OLIVER4298'
 );
 insert into locador values(
 	DEFAULT,
@@ -309,9 +304,9 @@ insert into locador values(
 	'85999468693',
 	'85997793695',
 	'BIASILVA',
-	'BIASIL5398',
-	'3'
+	'BIASIL5398'
 );
+
 select * from locador;
 
 
